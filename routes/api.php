@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\{ MeController, UserController, ConversationController };
 use App\Http\Controllers\Auth\AuthController;
 
+// Route::route(['middleware' => ['auth:sanctum']]);
+
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::group(['middleware' => 'auth:sanctum'], function(){

@@ -3,7 +3,7 @@
         <div class="p-8 h-screen overflow-auto scroller">
             <div class="flex justify-center">
                 <div class="relative">
-                    <img class="rounded-full object-cover h-24 w-24" :src="require('@/assets/' + user.avatar)" />
+                    <img class="rounded-full object-cover h-24 w-24" :src="'../assets/' + user.avatar" />
                     <span class="absolute right-2 bottom-0 border-2 border-white w-4 h-4 bg-green-500 rounded-full"></span>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                         }"
                         class="flex justify-center items-center"
                     >
-                        <img class="rounded-full object-cover h-14 w-14" :src="require('@/assets/' + people.avatar)" />
+                        <img class="rounded-full object-cover h-14 w-14" :src="'../assets/' + people.avatar" />
                         <div class="ml-3 lg:flex justify-between items-center w-full hidden lg:visible">
                             <div class="space-y-1">
                                 <h3 class="font-medium text-gray-800">{{ people.name }}</h3>

@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Broadcast;
 |
 */
 
-Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
+Broadcast::channel('message', function ($user, $conversationId) {
+    $canAccess = [];
+
+    if ($user->email == 'febriye12@gmail.com') {
+        $canAccess = [1,2,3,4,5];
+    }else {
+        $canAccess = [1];
+    }
+
+    return in_array($conversationId, $canAccess);
+    // return (int) $user->id === (int) $id;
 });
